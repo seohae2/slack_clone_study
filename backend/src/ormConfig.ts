@@ -6,7 +6,7 @@ dotenv.config();
 
 // ConnectionOptions 안의 객체를 선언한것으로, 잘못된게 있으면 오류가 남
 // :ConnectionOptions 에러 이유 : 아래 선언된 값이 비어있을 경우가 있으면?
-const connectionOptions:ConnectionOptions = {
+const connectionOptions: ConnectionOptions = {
     type : "postgres",
     database : "slack_clone",
     synchronize : true, // 소스에서 수정하고 나면, db에 변경된 내역이 바로 반영됨
