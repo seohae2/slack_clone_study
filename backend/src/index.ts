@@ -1,8 +1,11 @@
 import {GraphQLServer} from "graphql-yoga"
 import connection from "./ormConfig";
+import schema from "./schema"; // schema.ts import
 
 // Query, mutation(데이터 추가, 삭제), subscribe(구독)
 // ! : 필수로 return 이 되어야함
+/**
+------------------------------------------------------------
 const typeDefs = `
     type Query {
         sayHello : String!
@@ -13,8 +16,13 @@ const resolvers = {
         sayHello: () => "Hi there :0)"
     }
 }; // 함수의 비지니스 로직이 실제로 들어가는 부분
+------------------------------------------------------------
+*/
 
-const server = new GraphQLServer({ typeDefs, resolvers });
+
+// const server = new GraphQLServer({ typeDefs, resolvers });
+// 변경 : schemas.ts 파일 생성 후 아래로 변경 (3번째줄 import 추가하여 위 이전 코드 주석처리)
+const server = new GraphQLServer({ schema });
 
 // DB connection (connection 이 이뤄진 후에, 서버를 시작한다.)
 connection.then(() =>
