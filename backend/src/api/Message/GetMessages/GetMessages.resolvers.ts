@@ -18,9 +18,11 @@ const resolvers: Resolvers = {
                 // 리스트 조회 =select * from Message where innerChannelId = 0
                 // innerChannelId와 일치하는 데이터를 조회해달라는 의미
 
+                // typeOrm의 역할
                 // await : 동기적으로 실행되고있으므로 데이터를 가져올때까지 기다려줘야해서 await 선언
                 const messages = await Message.find({innerChannelId}); // {innerChannelId} =>(동일) innerChannelId = innerChannelId
                 
+                // graphql의 역할
                 return {
                     ok: true, // 성공
                     error: null, // 성공했으므로 error는 null
