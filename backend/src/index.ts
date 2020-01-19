@@ -1,10 +1,14 @@
+// React에서 _'create-react-app'_과 같이 손쉽게 graphql 설치를 할 수 있도록 도와주는 graphql 종합 패키지
 import {GraphQLServer} from "graphql-yoga"
+// DB 정보 파일 ormConfig import
 import connection from "./ormConfig";
-import schema from "./schema"; // schema.ts import
+// // schema.ts import (아래 typeDefs, resolvers를 주석처리하고 import 추가)
+import schema from "./schema";
 
-// Query, mutation(데이터 추가, 삭제), subscribe(구독)
-// ! : 필수로 return 이 되어야함
 /**
+> Query, mutation(데이터 추가, 삭제), subscribe(구독)
+> ! : 필수로 return 이 되어야함
+
 ------------------------------------------------------------
 const typeDefs = `
     type Query {
@@ -19,12 +23,11 @@ const resolvers = {
 ------------------------------------------------------------
 */
 
-
 // const server = new GraphQLServer({ typeDefs, resolvers });
-// 변경 : schemas.ts 파일 생성 후 아래로 변경 (3번째줄 import 추가하여 위 이전 코드 주석처리)
+// 변경 : schemas.ts 파일 생성 후 아래로 변경 (schema import 추가하여 위 이전 코드 주석처리)
 const server = new GraphQLServer({ schema });
 
-// DB connection (connection 이 이뤄진 후에, 서버를 시작한다.)
+// DB connection (connection이 이뤄진 후에, 서버를 시작한다.)
 connection.then(() =>
     server.start(() => 
         console.log('My first GraphQL Server is running on localhost:4000')

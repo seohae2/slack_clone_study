@@ -1,7 +1,7 @@
 import {createConnection, Connection, ConnectionOptions} from "typeorm";
 
-//const devenv = require("detenv");
-import dotenv from "dotenv";
+// 데이터베이스의 환경설정 정보 같은 것을 다른 파일에 정의 해두고 사용하고 싶을 때 사용하는 패키지
+import dotenv from "dotenv"; // const devenv = require("detenv"); (옛날방식)
 dotenv.config();
 
 // ConnectionOptions 안의 객체를 선언한것으로, 잘못된게 있으면 오류가 남
