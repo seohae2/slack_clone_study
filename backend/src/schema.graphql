@@ -1,0 +1,37 @@
+type Channel {
+  id: Int!
+  channelName: String!
+  messages: [Message]
+  createdAt: String!
+  updatedAt: String
+}
+
+type GetMessagesResponse {
+  ok: Boolean!
+  error: String
+  messages: [Message]
+}
+
+type Query {
+  GetMessages(innerChannelId: Int!): GetMessagesResponse!
+}
+
+type SendMessageResponse {
+  ok: Boolean!
+  error: String
+}
+
+type Mutation {
+  SendMessage(nickname: String!, contents: String!, thumbnail: String!, innerChannelId: Int!): SendMessageResponse!
+}
+
+type Message {
+  id: Int!
+  nickname: String!
+  contents: String!
+  thumbnail: String!
+  innerChannel: Channel!
+  innerChannelId: Int!
+  createdAt: String!
+  updatedAt: String
+}

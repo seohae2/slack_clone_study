@@ -1,12 +1,15 @@
 import { Resolvers } from "src/types/resolvers";
 // typeOrm + typescript > 상대경로로 사용해야함 (절대경로로는 파일을 못찾음)
-import Message from "../../../../src/entities/Message"; // entities : DB에 테이블을 위한 것 
+import Message from "../../../../src/entities/Message"; // entities : DB에 테이블을 위한 것
+import { GetMessagesQueryArgs, GetMessagesResponse } from "src/types/graphql"; 
 
 // 아래 쿼리 구조는 graphQL에서 정해놓은 규격
 const resolvers: Resolvers = {
     Query: {
         // API이름: 동기함수(_, ) 사용자가 API를 호출했을때 인자값이 args 안으로 들어온다
-        GetMessages: async(_, args) => {
+        GetMessages: async (
+            _, args: GetMessagesQueryArgs
+          ): Promise<GetMessagesResponse> => {
             // 실제 비즈니스로직 부분
             // 로직 시작
             // 데이터를 다루므로 try~catch문 사용
