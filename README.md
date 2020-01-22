@@ -33,3 +33,11 @@ slack clone study (12:00 ~ 13:00)
 5. 2020.01.16 (참석)
 - 현재까지 스터디 내용 정리하는 시간
 
+6. 2020.01.21 (참석)
+- backend/package.json (update)
+- backend/src/api/Message/GetMessages/GetMessages.resolvers.ts (update)
+- backend/src/api/Message/GetMessages/GetMessages.resolvers.ts
+- backend/src/api/Message/SendMessage/SendMessage.resolvers.ts
+- backend/src/entities/Message.ts (update - thumnail add)
+- backend/src/schema.graphql
+- backend/src/types/graphql.d.ts
