@@ -3,15 +3,15 @@ import {
   SendMessageMutationArgs,
   SendMessageResponse
 } from "src/types/graphql";
-import Channel from "src/entities/Channel";
-import Message from "src/entities/Message";
+import Channel from "../../../../src/entities/Channel";
+import Message from "../../../../src/entities/Message";
 
 const resolvers: Resolvers = {
   Mutation: {
     SendMessage: async (
       _,
-      args: SendMessageMutationArgs
-    ): Promise<SendMessageResponse> => {
+      args: SendMessageMutationArgs      
+    ): Promise<SendMessageResponse> => {// typescrpt, graphql 2개다 확인해라.
       try {
         const { nickname, contents, thumbnail, innerChannelId } = args;
 
