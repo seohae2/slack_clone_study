@@ -1,5 +1,5 @@
 import { Resolvers } from "src/types/resolvers";
-import Channel from "../../../../src/entities/Channel";
+import Channel from "../../../entities/Channel";
 import { CreateChannelMutationArgs, CreateChannelResponse } from "src/types/graphql";
 
 const resolvers:Resolvers = {
