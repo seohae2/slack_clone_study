@@ -44,3 +44,10 @@ slack clone study (12:00 ~ 13:00)
 
 7. 2020.01.23 (참석)
 - 종원님 1:1 과외 ㅎㅎ
+- backend/src/api/Channel/CreateChannel/CreateChannel.graphql
+- backend/src/api/Channel/CreateChannel/CreateChannel.reslovers.ts
+- backend/src/api/Channel/GetChannels/GetChannels.graphql (주석추가- update)
+- backend/src/api/Channel/GetChannels/GetChannels.resolvers.ts (주석추가- update)
+- backend/src/api/Message/SendMessage/SendMessage.resolvers.ts (주석추가- update)
+- backend/src/schema.graphql (update)
+- backend/src/types/graphql.d.ts (update)
