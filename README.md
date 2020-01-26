@@ -41,3 +41,6 @@ slack clone study (12:00 ~ 13:00)
 - backend/src/entities/Message.ts (update - thumnail add)
 - backend/src/schema.graphql
 - backend/src/types/graphql.d.ts
+
+7. 2020.01.23 (참석)
+- 종원님 1:1 과외 ㅎㅎ
