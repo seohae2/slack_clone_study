@@ -3,9 +3,10 @@ import Channel from "../../../entities/Channel";
 import { CreateChannelMutationArgs, CreateChannelResponse } from "src/types/graphql";
 
 const resolvers:Resolvers = {
-    Mutation:{
+    Mutation:{ // get 을 제외하고는 Mutation이다. get만 Query 이다.
+        // 동기 함수의 return type (Promise)
         CreateChannel: async(_, args:CreateChannelMutationArgs):Promise<CreateChannelResponse> => {
-            try{
+            try {
                const {channelName} = args;
 
                const isExistChannel = await Channel.findOne({ channelName });
@@ -24,7 +25,7 @@ const resolvers:Resolvers = {
                    error: null
                }
 
-            }catch(error){
+            } catch(error) {
                 return {
                     ok: false,
                     error: error.message
