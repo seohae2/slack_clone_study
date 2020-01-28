@@ -22,6 +22,7 @@ const resolvers:Resolvers = {
             
                // 위 if문을 타지 않았을경우엔 채널이 등록이 가능한 경우
                // create -> save(commit) 순서
+               // DB 관련은 await을 써줘야함 (이 행이 끝날때까지 기다려라)
                await Channel.create({ channelName }).save();
 
                return {
