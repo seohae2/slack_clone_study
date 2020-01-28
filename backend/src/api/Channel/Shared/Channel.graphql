@@ -1,4 +1,4 @@
-type Channel {
+type Channel { #channel에 대한 model typedef
   id: Int!
   channelName: String!
   messages: [Message]
