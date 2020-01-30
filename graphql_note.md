@@ -45,3 +45,12 @@ mutation {
     changedName
   }
 }	
+
+## Modify Message
+mutation {
+  ModifyMessage(id: 3, nextMessage:"서해") {
+    ok
+    error
+    changedMessage
+  }
+}	
