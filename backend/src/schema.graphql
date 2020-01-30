@@ -6,6 +6,7 @@ type CreateChannelResponse {
 type Mutation {
   CreateChannel(channelName: String!): CreateChannelResponse!
   ModifyChannel(id: Int!, nextName: String!): ModifyChannelResponse!
+  ModifyMessage(id: Int!, nextMessage: String!): ModifyMessageResponse!
   SendMessage(nickname: String!, contents: String!, thumbnail: String!, innerChannelId: Int!): SendMessageResponse!
 }
 
@@ -38,6 +39,12 @@ type GetMessagesResponse {
   ok: Boolean!
   error: String
   messages: [Message]
+}
+
+type ModifyMessageResponse {
+  ok: Boolean!
+  error: String
+  changedMessage: String
 }
 
 type SendMessageResponse {
