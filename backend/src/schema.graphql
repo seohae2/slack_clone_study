@@ -5,6 +5,7 @@ type CreateChannelResponse {
 
 type Mutation {
   CreateChannel(channelName: String!): CreateChannelResponse!
+  ModifyChannel(id: Int!, nextName: String!): ModifyChannelResponse!
   SendMessage(nickname: String!, contents: String!, thumbnail: String!, innerChannelId: Int!): SendMessageResponse!
 }
 
@@ -17,6 +18,12 @@ type GetChannelsResponse {
 type Query {
   GetChannels: GetChannelsResponse!
   GetMessages(innerChannelId: Int!): GetMessagesResponse!
+}
+
+type ModifyChannelResponse {
+  ok: Boolean!
+  error: String
+  changedName: String
 }
 
 type Channel {
