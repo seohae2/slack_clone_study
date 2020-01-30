@@ -36,3 +36,12 @@ mutation{
     }
   }
 }
+
+## Modify Channel
+mutation {
+  ModifyChannel(id: 2, nextName:"서해") {
+    ok
+    error
+    changedName
+  }
+}	
