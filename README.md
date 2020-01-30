@@ -51,3 +51,16 @@ slack clone study (12:00 ~ 13:00)
 - backend/src/api/Message/SendMessage/SendMessage.resolvers.ts (주석추가- update)
 - backend/src/schema.graphql (update)
 - backend/src/types/graphql.d.ts (update)
+
+8. 2020.01.28 (참석)
+- 정리 (주석추가)
+
+9. 2020.01.30 (참석)
+- backend/src/api/Channel/ModifyChannel/ModifyChannel.graphql
+- backend/src/api/Channel/ModifyChannel/ModifyChannel.resolvers.ts
+- backend/src/schema.graphql (update)
+- backend/src/types/graphql.d.ts (update)
+- backend/src/api/Message/ModifyMessage/ModifyMessage.graphql
+- backend/src/api/Message/ModifyMessage/ModifyMessage.resolvers.ts
+
+
