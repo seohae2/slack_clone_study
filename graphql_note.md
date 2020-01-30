@@ -1,4 +1,4 @@
-## create Channel
+## Create Channel
 mutation {
   CreateChannel(channelName:"자유시장") {
     ok
@@ -6,7 +6,7 @@ mutation {
   }
 }	
 
-## get Channel
+## Get Channel
 {
   GetChannels{
     ok
@@ -18,7 +18,7 @@ mutation {
   }
 }
 
-## send Message
+## Send Message
 mutation{
   SendMessage(nickname: "dev4us", contents:"하이염!", thumbnail:"1", innerChannelId:1){
     ok
@@ -26,7 +26,7 @@ mutation{
   }
 }
 
-## get Message
+## Get Message
 {
   GetMessages(innerChannelId : 1) {
     ok
