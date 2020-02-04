@@ -54,3 +54,10 @@ mutation {
     changedMessage
   }
 }	
+
+## Subscribe Create Channel
+subscription{
+  reateChannelSubscription {
+    channelName
+  }
+}
