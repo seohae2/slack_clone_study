@@ -1,4 +1,4 @@
-export const typeDefs = ["type CreateChannelResponse {\n  ok: Boolean!\n  error: String\n}\n\ntype Mutation {\n  CreateChannel(channelName: String!): CreateChannelResponse!\n  ModifyChannel(id: Int!, nextName: String!): ModifyChannelResponse!\n  ModifyMessage(id: Int!, nextMessage: String!): ModifyMessageResponse!\n  SendMessage(nickname: String!, contents: String!, thumbnail: String!, innerChannelId: Int!): SendMessageResponse!\n}\n\ntype GetChannelsResponse {\n  ok: Boolean!\n  error: String\n  channels: [Channel]\n}\n\ntype Query {\n  GetChannels: GetChannelsResponse!\n  GetMessages(innerChannelId: Int!): GetMessagesResponse!\n}\n\ntype ModifyChannelResponse {\n  ok: Boolean!\n  error: String\n  changedName: String\n}\n\ntype Channel {\n  id: Int!\n  channelName: String!\n  messages: [Message]\n  createdAt: String!\n  updatedAt: String\n}\n\ntype GetMessagesResponse {\n  ok: Boolean!\n  error: String\n  messages: [Message]\n}\n\ntype ModifyMessageResponse {\n  ok: Boolean!\n  error: String\n  changedMessage: String\n}\n\ntype SendMessageResponse {\n  ok: Boolean!\n  error: String\n}\n\ntype Message {\n  id: Int!\n  nickname: String!\n  contents: String!\n  thumbnail: String!\n  innerChannel: Channel!\n  innerChannelId: Int!\n  createdAt: String!\n  updatedAt: String\n}\n"];
+export const typeDefs = ["type CreateChannelResponse {\n  ok: Boolean!\n  error: String\n}\n\ntype Mutation {\n  CreateChannel(channelName: String!): CreateChannelResponse!\n  ModifyChannel(id: Int!, nextName: String!): ModifyChannelResponse!\n  ModifyMessage(id: Int!, nextMessage: String!): ModifyMessageResponse!\n  SendMessage(nickname: String!, contents: String!, thumbnail: String!, innerChannelId: Int!): SendMessageResponse!\n}\n\ntype Subscription {\n  CreateChannelSubscription: Channel\n  CreateMessageSubscription: Message\n}\n\ntype GetChannelsResponse {\n  ok: Boolean!\n  error: String\n  channels: [Channel]\n}\n\ntype Query {\n  GetChannels: GetChannelsResponse!\n  GetMessages(innerChannelId: Int!): GetMessagesResponse!\n}\n\ntype ModifyChannelResponse {\n  ok: Boolean!\n  error: String\n  changedName: String\n}\n\ntype Channel {\n  id: Int!\n  channelName: String!\n  messages: [Message]\n  createdAt: String!\n  updatedAt: String\n}\n\ntype GetMessagesResponse {\n  ok: Boolean!\n  error: String\n  messages: [Message]\n}\n\ntype ModifyMessageResponse {\n  ok: Boolean!\n  error: String\n  changedMessage: String\n}\n\ntype SendMessageResponse {\n  ok: Boolean!\n  error: String\n}\n\ntype Message {\n  id: Int!\n  nickname: String!\n  contents: String!\n  thumbnail: String!\n  innerChannel: Channel!\n  innerChannelId: Int!\n  createdAt: String!\n  updatedAt: String\n}\n"];
 /* tslint:disable */
 
 export interface Query {
@@ -89,4 +89,9 @@ export interface ModifyMessageResponse {
 export interface SendMessageResponse {
   ok: boolean;
   error: string | null;
+}
+
+export interface Subscription {
+  CreateChannelSubscription: Channel | null;
+  CreateMessageSubscription: Message | null;
 }

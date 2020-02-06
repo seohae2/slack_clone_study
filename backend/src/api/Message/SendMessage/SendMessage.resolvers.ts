@@ -10,7 +10,8 @@ const resolvers: Resolvers = {
   Mutation: {
     SendMessage: async (
       _,
-      args: SendMessageMutationArgs      
+      args: SendMessageMutationArgs,
+      {pubSub}      
     ): Promise<SendMessageResponse> => {// typescrpt, graphql 2개다 확인해라.
       try {
         const { nickname, contents, thumbnail, innerChannelId } = args;
@@ -24,12 +25,17 @@ const resolvers: Resolvers = {
           };
         }
 
-        await Message.create({
+        const newMessage = await Message.create({
           nickname,
           thumbnail,
           contents,
           innerChannelId
         }).save();
+
+        // pubSub에 신호를 준다. ("newChannel")
+        pubSub.publish("newMessage", {
+          CreateMessageSubscription: newMessage
+     }); 
 
         return {
           ok: true,

@@ -10,6 +10,8 @@ const resolvers:Resolvers = {
 
                 const ExistChannel = await Channel.findOne({ id });
 
+                // 아래 체크하는게 없으면 ExistChannel을 사용할때 undefinied 타입일 수도 있다고
+                // 타입스크립트에서 알려준다.
                 if (!ExistChannel) {
                     return {
                         ok: false,

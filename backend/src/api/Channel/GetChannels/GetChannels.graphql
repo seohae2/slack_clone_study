@@ -4,6 +4,6 @@ type GetChannelsResponse{
     channels: [Channel]
 }
 
-type Query{
+type Query {
     GetChannels: GetChannelsResponse!
 }
