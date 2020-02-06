@@ -63,4 +63,9 @@ slack clone study (12:00 ~ 13:00)
 - backend/src/api/Message/ModifyMessage/ModifyMessage.graphql
 - backend/src/api/Message/ModifyMessage/ModifyMessage.resolvers.ts
 
+## 10. 2020.02.04 (참석)
+- Subscribe 기능 추가
+- 다음주에 이어서 하므로 commit/push 없음
+
+## 11. 2020.02.06 (참석)
 
