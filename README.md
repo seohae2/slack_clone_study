@@ -64,8 +64,21 @@ slack clone study (12:00 ~ 13:00)
 - backend/src/api/Message/ModifyMessage/ModifyMessage.resolvers.ts
 
 ## 10. 2020.02.04 (참석)
+- backend/src/api/Channel/GetChannels/GetChannels.graphql (update)
+- backend/src/api/Channel/GetChannels/GetChannels.resolvers.ts (update)
+
 - Subscribe 기능 추가
 - 다음주에 이어서 하므로 commit/push 없음
 
 ## 11. 2020.02.06 (참석)
+- backend/src/api/Channel/CreateChannel/CreateChannel.resolvers.ts (update)
+- backend/src/api/Channel/CreateChannelSubscription/CreateChannelSubscription.graphql
+- backend/src/api/Channel/CreateChannelSubscription/CreateChannelSubscription.resolvers.ts
+- backend/src/api/Channel/ModifyChannel/ModifyChannel.resolvers.ts (주석추가)
+- backend/src/api/Message/CreateMessageSubscription/CreateMessageSubscription.graphql
+- backend/src/api/Message/CreateMessageSubscription/CreateMessageSubscription.resolvers.ts
+- backend/src/api/Message/SendMessage/SendMessage.resolvers.ts (update)
+- backend/src/index.ts (update)
+- backend/src/schema.graphql (update)
+- backend/src/types/graphql.d.ts (update)
 
