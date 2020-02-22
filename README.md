@@ -1,3 +1,4 @@
+# Backend
 # slack_clone_study
 slack clone study (12:00 ~ 13:00)
 
@@ -82,3 +83,34 @@ slack clone study (12:00 ~ 13:00)
 - backend/src/schema.graphql (update)
 - backend/src/types/graphql.d.ts (update)
 
+# Frontend
+## 12. 2020.02.11 (참석)
+- frontend/.gitignore
+- frontend/package.json
+- frontend/src/App.js
+- frontend/public/index.html
+- frontend/src/Counter.js
+- frontend/src/index.js
+
++ npx create-react-app frontend (window: npm -g install crete-react-app)
+
+## 13. 2020.02.13 (참석)
+- frontend/package.json
+- frontend/src/App.js
+- frontend/src/Components/ChannelList.js
+- frontend/src/GlobalStyle.js
+- frontend/src/index.js
+- frontend/src/test/Counter2.js
+
++ yarn add styled-components
++ yarn add styled-reset
+
+## 14. 2020.02.18 (불참 - 오후반차)
+
+## 15. 2020.02.20 (참석)
+- frontend/package.json
+- frontend/src/App.js
+- frontend/src/Components/ChannelList.js
+- frontend/src/Components/ChatList.js
+- frontend/src/apolloClient.js
+- frontend/src/index.js
